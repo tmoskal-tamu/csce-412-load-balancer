@@ -44,3 +44,7 @@ bool WebServer::isBusy() const {
 Request WebServer::getCurrentRequest() const {
     return currentRequest; // Return the current request.
 }
+
+int WebServer::getRemainingTime() {
+    return remainingTime;
+}

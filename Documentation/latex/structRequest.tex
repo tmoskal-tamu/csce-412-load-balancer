@@ -1,0 +1,157 @@
+\hypertarget{structRequest}{}\doxysection{Request Class Reference}
+\label{structRequest}\index{Request@{Request}}
+
+
+Represents a request sent to the server.  
+
+
+
+
+{\ttfamily \#include $<$Request.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structRequest_a5501c1e3269266dec66b96ce53319a62}{Request}} (const std\+::string \&ip\+In\+\_\+, const std\+::string \&ip\+Out\+\_\+, int time\+\_\+, char job\+Type\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructs a request with the given IP addresses, processing time, and job type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structRequest_a5501c1e3269266dec66b96ce53319a62}{Request}} (const std\+::string \&ip\+In\+\_\+, const std\+::string \&ip\+Out\+\_\+, int time\+\_\+, char job\+Type\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructs a request with given parameters. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structRequest_a4e846b9c4d5aa84505e5978793081f70}{get\+I\+P\+In}} () const
+\begin{DoxyCompactList}\small\item\em Gets the IP address of the client making the request. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{structRequest_ab30f203cd09679a661f86b0808e2d7dc}{get\+I\+P\+Out}} () const
+\begin{DoxyCompactList}\small\item\em Gets the IP address of the server responding to the request. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structRequest_ae2e2641e6eb49b4dd1b29726c098789d}{get\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Gets the time required to process the request. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{structRequest_a543cfe98d09b712ffcfe95f3322fa5ba}{get\+Job\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Gets the type of job. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structRequest_aa83b5e8331e7f13fb5742984f955d0c1}\label{structRequest_aa83b5e8331e7f13fb5742984f955d0c1}} 
+std\+::string \mbox{\hyperlink{structRequest_aa83b5e8331e7f13fb5742984f955d0c1}{ip\+In}}
+\begin{DoxyCompactList}\small\item\em IP address of the client making the request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structRequest_af585c7ba4ed14c760cf8d72b232091b4}\label{structRequest_af585c7ba4ed14c760cf8d72b232091b4}} 
+std\+::string \mbox{\hyperlink{structRequest_af585c7ba4ed14c760cf8d72b232091b4}{ip\+Out}}
+\begin{DoxyCompactList}\small\item\em IP address of the server responding to the request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structRequest_a3cfb576ed0b5e08612f3de8bc7cd72e2}\label{structRequest_a3cfb576ed0b5e08612f3de8bc7cd72e2}} 
+int \mbox{\hyperlink{structRequest_a3cfb576ed0b5e08612f3de8bc7cd72e2}{time}}
+\begin{DoxyCompactList}\small\item\em Time required to process the request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structRequest_ad49a0f18615ea50f9a11cd2494c93044}\label{structRequest_ad49a0f18615ea50f9a11cd2494c93044}} 
+char \mbox{\hyperlink{structRequest_ad49a0f18615ea50f9a11cd2494c93044}{job\+Type}}
+\begin{DoxyCompactList}\small\item\em Type of job (\textquotesingle{}P\textquotesingle{} for processing, \textquotesingle{}S\textquotesingle{} for streaming) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a request sent to the server. 
+
+A \mbox{\hyperlink{structRequest}{Request}} contains information about the IP addresses involved, the amount of time required to process the request, and the type of job (e.\+g., \textquotesingle{}P\textquotesingle{} for processing, \textquotesingle{}S\textquotesingle{} for streaming). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structRequest_a5501c1e3269266dec66b96ce53319a62}\label{structRequest_a5501c1e3269266dec66b96ce53319a62}} 
+\index{Request@{Request}!Request@{Request}}
+\index{Request@{Request}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{Request()}{Request()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Request\+::\+Request (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ip\+In\+\_\+,  }\item[{const std\+::string \&}]{ip\+Out\+\_\+,  }\item[{int}]{time\+\_\+,  }\item[{char}]{job\+Type\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a request with the given IP addresses, processing time, and job type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip\+In\+\_\+} & IP address of the client making the request. \\
+\hline
+{\em ip\+Out\+\_\+} & IP address of the server responding to the request. \\
+\hline
+{\em time\+\_\+} & Time required to process the request. \\
+\hline
+{\em job\+Type\+\_\+} & Type of job (\textquotesingle{}P\textquotesingle{} for processing, \textquotesingle{}S\textquotesingle{} for streaming). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structRequest_a5501c1e3269266dec66b96ce53319a62}\label{structRequest_a5501c1e3269266dec66b96ce53319a62}} 
+\index{Request@{Request}!Request@{Request}}
+\index{Request@{Request}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{Request()}{Request()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Request\+::\+Request (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{ip\+In\+\_\+,  }\item[{const std\+::string \&}]{ip\+Out\+\_\+,  }\item[{int}]{time\+\_\+,  }\item[{char}]{job\+Type\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Constructs a request with given parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip\+In\+\_\+} & IP address of the client. \\
+\hline
+{\em ip\+Out\+\_\+} & IP address of the server. \\
+\hline
+{\em time\+\_\+} & Processing time for the request. \\
+\hline
+{\em job\+Type\+\_\+} & Type of job (\textquotesingle{}P\textquotesingle{} or \textquotesingle{}S\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structRequest_a4e846b9c4d5aa84505e5978793081f70}\label{structRequest_a4e846b9c4d5aa84505e5978793081f70}} 
+\index{Request@{Request}!getIPIn@{getIPIn}}
+\index{getIPIn@{getIPIn}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getIPIn()}{getIPIn()}}
+{\footnotesize\ttfamily std\+::string Request\+::get\+I\+P\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the IP address of the client making the request. 
+
+\begin{DoxyReturn}{Returns}
+The client\textquotesingle{}s IP address. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structRequest_ab30f203cd09679a661f86b0808e2d7dc}\label{structRequest_ab30f203cd09679a661f86b0808e2d7dc}} 
+\index{Request@{Request}!getIPOut@{getIPOut}}
+\index{getIPOut@{getIPOut}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getIPOut()}{getIPOut()}}
+{\footnotesize\ttfamily std\+::string Request\+::get\+I\+P\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the IP address of the server responding to the request. 
+
+\begin{DoxyReturn}{Returns}
+The server\textquotesingle{}s IP address. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structRequest_a543cfe98d09b712ffcfe95f3322fa5ba}\label{structRequest_a543cfe98d09b712ffcfe95f3322fa5ba}} 
+\index{Request@{Request}!getJobType@{getJobType}}
+\index{getJobType@{getJobType}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getJobType()}{getJobType()}}
+{\footnotesize\ttfamily char Request\+::get\+Job\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the type of job. 
+
+\begin{DoxyReturn}{Returns}
+Job type (\textquotesingle{}P\textquotesingle{} or \textquotesingle{}S\textquotesingle{}).
+
+The job type (\textquotesingle{}P\textquotesingle{} or \textquotesingle{}S\textquotesingle{}). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structRequest_ae2e2641e6eb49b4dd1b29726c098789d}\label{structRequest_ae2e2641e6eb49b4dd1b29726c098789d}} 
+\index{Request@{Request}!getTime@{getTime}}
+\index{getTime@{getTime}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily int Request\+::get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the time required to process the request. 
+
+\begin{DoxyReturn}{Returns}
+Processing time.
+
+Processing time in clock cycles. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+load\+\_\+balancer.\+cpp\item 
+Request.\+h\item 
+Request.\+cpp\end{DoxyCompactItemize}

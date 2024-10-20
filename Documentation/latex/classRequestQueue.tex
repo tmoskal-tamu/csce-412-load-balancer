@@ -1,0 +1,97 @@
+\hypertarget{classRequestQueue}{}\doxysection{Request\+Queue Class Reference}
+\label{classRequestQueue}\index{RequestQueue@{RequestQueue}}
+
+
+Manages a queue of requests to be processed by web servers.  
+
+
+
+
+{\ttfamily \#include $<$Request\+Queue.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRequestQueue_a21e0a1d77be4020d82b062e328b4d6dd}{add\+Request}} (const \mbox{\hyperlink{classRequest}{Request}} \&request)
+\begin{DoxyCompactList}\small\item\em Adds a request to the queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRequest}{Request}} \mbox{\hyperlink{classRequestQueue_aabcf6ed3aba61682bdfcc5c48d2face5}{get\+Next\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves and removes the next request from the queue. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classRequestQueue_a64c8b54cc30da887d61663e44dece1d5}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the request queue is empty. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classRequestQueue_a740fb2303eb31d5339d0f9cab7ce011e}{size}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current number of requests in the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages a queue of requests to be processed by web servers. 
+
+The \mbox{\hyperlink{classRequestQueue}{Request\+Queue}} class allows for adding requests to the queue and retrieving requests in a first-\/in-\/first-\/out (F\+I\+FO) order. It also checks whether the queue is empty. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRequestQueue_a21e0a1d77be4020d82b062e328b4d6dd}\label{classRequestQueue_a21e0a1d77be4020d82b062e328b4d6dd}} 
+\index{RequestQueue@{RequestQueue}!addRequest@{addRequest}}
+\index{addRequest@{addRequest}!RequestQueue@{RequestQueue}}
+\doxysubsubsection{\texorpdfstring{addRequest()}{addRequest()}}
+{\footnotesize\ttfamily void Request\+Queue\+::add\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRequest}{Request}} \&}]{request }\end{DoxyParamCaption})}
+
+
+
+Adds a request to the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The request to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRequestQueue_aabcf6ed3aba61682bdfcc5c48d2face5}\label{classRequestQueue_aabcf6ed3aba61682bdfcc5c48d2face5}} 
+\index{RequestQueue@{RequestQueue}!getNextRequest@{getNextRequest}}
+\index{getNextRequest@{getNextRequest}!RequestQueue@{RequestQueue}}
+\doxysubsubsection{\texorpdfstring{getNextRequest()}{getNextRequest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRequest}{Request}} Request\+Queue\+::get\+Next\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves and removes the next request from the queue. 
+
+\begin{DoxyReturn}{Returns}
+The next request in the queue.
+
+The next request in the queue. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the queue is empty. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classRequestQueue_a64c8b54cc30da887d61663e44dece1d5}\label{classRequestQueue_a64c8b54cc30da887d61663e44dece1d5}} 
+\index{RequestQueue@{RequestQueue}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!RequestQueue@{RequestQueue}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Request\+Queue\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the request queue is empty. 
+
+\begin{DoxyReturn}{Returns}
+True if the queue is empty, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRequestQueue_a740fb2303eb31d5339d0f9cab7ce011e}\label{classRequestQueue_a740fb2303eb31d5339d0f9cab7ce011e}} 
+\index{RequestQueue@{RequestQueue}!size@{size}}
+\index{size@{size}!RequestQueue@{RequestQueue}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Request\+Queue\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the current number of requests in the queue. 
+
+\begin{DoxyReturn}{Returns}
+The number of requests in the queue. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Request\+Queue.\+h\item 
+Request\+Queue.\+cpp\end{DoxyCompactItemize}

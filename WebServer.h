@@ -18,8 +18,7 @@ public:
     void tick();               ///< Decreases remaining time for the current request.
     bool isBusy() const;       ///< Checks if the server is busy.
     Request getCurrentRequest() const; ///< Gets the current request being processed.
-
-    // Other methods as needed...
+    int getRemainingTime();    ///< Gets remaining time left on current request, if any.
 };
 
 #endif // WEBSERVER_H

@@ -1,0 +1,157 @@
+\hypertarget{classLoadBalancer}{}\doxysection{Load\+Balancer Class Reference}
+\label{classLoadBalancer}\index{LoadBalancer@{LoadBalancer}}
+
+
+Manages the distribution of requests across multiple \mbox{\hyperlink{classWebServer}{Web\+Server}} instances.  
+
+
+
+
+{\ttfamily \#include $<$Load\+Balancer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classLoadBalancer_a379bc7521f598f4080cefa6e75637a7d}{generate\+Random\+IP}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random IP address in the form of \textquotesingle{}xxx.\+xxx.\+xxx.\+xxx\textquotesingle{}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLoadBalancer_a6114560fd6fd431c75adeab2f0b230a9}{Load\+Balancer}} (int num\+Servers)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} with a specified number of servers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLoadBalancer_abba1a1fcaa67e79e9aee94e903e1458c}{add\+Request}} (const \mbox{\hyperlink{classRequest}{Request}} \&request)
+\begin{DoxyCompactList}\small\item\em Adds a request to the request queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLoadBalancer_a4ff6c04da79b81680599acdb83bc9647}{simulate}} (int run\+Time)
+\begin{DoxyCompactList}\small\item\em Simulates the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}}\textquotesingle{}s operations over a specified runtime. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLoadBalancer_a43b5cdf41790ba4b968ec69c18f2c98d}{adjust\+Servers}} (std\+::ofstream \&log\+File)
+\begin{DoxyCompactList}\small\item\em Adjusts the number of servers based on the size of the request queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRequest}{Request}} \mbox{\hyperlink{classLoadBalancer_ae7e519bb1fc55c91a875f86a288cc6ca}{generate\+Random\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random request with random IP addresses, processing time, and job type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLoadBalancer_ad82aae7e1eef11cb2b5ba22b07047feb}{display\+Server\+Changes}} (std\+::ofstream \&log\+File) const
+\begin{DoxyCompactList}\small\item\em Displays the total number of servers added and removed during the simulation, as well as the number of requests created and completed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoadBalancer_a566d23dc9ad647f88580c4d366539ac3}\label{classLoadBalancer_a566d23dc9ad647f88580c4d366539ac3}} 
+void \mbox{\hyperlink{classLoadBalancer_a566d23dc9ad647f88580c4d366539ac3}{add\+Default\+Requests}} (int requests)
+\begin{DoxyCompactList}\small\item\em Adds a specified amount of initial requests to the total request count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the distribution of requests across multiple \mbox{\hyperlink{classWebServer}{Web\+Server}} instances. 
+
+The \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} class generates requests, distributes them to web servers, and dynamically adds or removes servers based on the request load. It also tracks the total number of servers added/removed and the total number of requests created/completed. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLoadBalancer_a6114560fd6fd431c75adeab2f0b230a9}\label{classLoadBalancer_a6114560fd6fd431c75adeab2f0b230a9}} 
+\index{LoadBalancer@{LoadBalancer}!LoadBalancer@{LoadBalancer}}
+\index{LoadBalancer@{LoadBalancer}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{LoadBalancer()}{LoadBalancer()}}
+{\footnotesize\ttfamily Load\+Balancer\+::\+Load\+Balancer (\begin{DoxyParamCaption}\item[{int}]{num\+Servers }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}} with a specified number of servers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Servers} & Initial number of servers. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLoadBalancer_abba1a1fcaa67e79e9aee94e903e1458c}\label{classLoadBalancer_abba1a1fcaa67e79e9aee94e903e1458c}} 
+\index{LoadBalancer@{LoadBalancer}!addRequest@{addRequest}}
+\index{addRequest@{addRequest}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{addRequest()}{addRequest()}}
+{\footnotesize\ttfamily void Load\+Balancer\+::add\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRequest}{Request}} \&}]{request }\end{DoxyParamCaption})}
+
+
+
+Adds a request to the request queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The request to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLoadBalancer_a43b5cdf41790ba4b968ec69c18f2c98d}\label{classLoadBalancer_a43b5cdf41790ba4b968ec69c18f2c98d}} 
+\index{LoadBalancer@{LoadBalancer}!adjustServers@{adjustServers}}
+\index{adjustServers@{adjustServers}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{adjustServers()}{adjustServers()}}
+{\footnotesize\ttfamily void Load\+Balancer\+::adjust\+Servers (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{log\+File }\end{DoxyParamCaption})}
+
+
+
+Adjusts the number of servers based on the size of the request queue. 
+
+Dynamically adjusts the number of servers based on the request queue size.
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+File} & The file for output to be directed to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLoadBalancer_ad82aae7e1eef11cb2b5ba22b07047feb}\label{classLoadBalancer_ad82aae7e1eef11cb2b5ba22b07047feb}} 
+\index{LoadBalancer@{LoadBalancer}!displayServerChanges@{displayServerChanges}}
+\index{displayServerChanges@{displayServerChanges}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{displayServerChanges()}{displayServerChanges()}}
+{\footnotesize\ttfamily void Load\+Balancer\+::display\+Server\+Changes (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{log\+File }\end{DoxyParamCaption}) const}
+
+
+
+Displays the total number of servers added and removed during the simulation, as well as the number of requests created and completed. 
+
+Displays the total number of servers added, removed, requests created, and requests completed after the simulation ends.
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\+File} & The file for output to be directed to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLoadBalancer_a379bc7521f598f4080cefa6e75637a7d}\label{classLoadBalancer_a379bc7521f598f4080cefa6e75637a7d}} 
+\index{LoadBalancer@{LoadBalancer}!generateRandomIP@{generateRandomIP}}
+\index{generateRandomIP@{generateRandomIP}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{generateRandomIP()}{generateRandomIP()}}
+{\footnotesize\ttfamily std\+::string Load\+Balancer\+::generate\+Random\+IP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates a random IP address in the form of \textquotesingle{}xxx.\+xxx.\+xxx.\+xxx\textquotesingle{}. 
+
+\begin{DoxyReturn}{Returns}
+A random IP address as a string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLoadBalancer_ae7e519bb1fc55c91a875f86a288cc6ca}\label{classLoadBalancer_ae7e519bb1fc55c91a875f86a288cc6ca}} 
+\index{LoadBalancer@{LoadBalancer}!generateRandomRequest@{generateRandomRequest}}
+\index{generateRandomRequest@{generateRandomRequest}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{generateRandomRequest()}{generateRandomRequest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRequest}{Request}} Load\+Balancer\+::generate\+Random\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates a random request with random IP addresses, processing time, and job type. 
+
+Generates a random request.
+
+\begin{DoxyReturn}{Returns}
+A randomly generated request. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLoadBalancer_a4ff6c04da79b81680599acdb83bc9647}\label{classLoadBalancer_a4ff6c04da79b81680599acdb83bc9647}} 
+\index{LoadBalancer@{LoadBalancer}!simulate@{simulate}}
+\index{simulate@{simulate}!LoadBalancer@{LoadBalancer}}
+\doxysubsubsection{\texorpdfstring{simulate()}{simulate()}}
+{\footnotesize\ttfamily void Load\+Balancer\+::simulate (\begin{DoxyParamCaption}\item[{int}]{run\+Time }\end{DoxyParamCaption})}
+
+
+
+Simulates the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}}\textquotesingle{}s operations over a specified runtime. 
+
+Simulates the \mbox{\hyperlink{classLoadBalancer}{Load\+Balancer}}\textquotesingle{}s operation over a specified number of clock cycles.
+
+
+\begin{DoxyParams}{Parameters}
+{\em run\+Time} & The total number of clock cycles for the simulation. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Load\+Balancer.\+h\item 
+Load\+Balancer.\+cpp\end{DoxyCompactItemize}

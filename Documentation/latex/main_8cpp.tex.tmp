@@ -1,0 +1,73 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Entry point for the load balancer simulation with dynamically generated requests.  
+
+
+{\ttfamily \#include \char`\"{}Load\+Balancer.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{main_8cpp_a0262883cd1482b5e76591b8333bd481d}{generate\+Random\+IP}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random IP address in the form of \textquotesingle{}xxx.\+xxx.\+xxx.\+xxx\textquotesingle{}. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{main_8cpp_a8be36aa7ba47c05222c3e10f3f3d490f}{random\+Job\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Randomly selects a job type for the request. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function that initializes the load balancer simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entry point for the load balancer simulation with dynamically generated requests. 
+
+This file simulates a load balancer that processes web requests using a set of web servers. It dynamically creates requests and distributes them across the servers during the simulation. The load balancer automatically adjusts the number of servers based on the request load. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a0262883cd1482b5e76591b8333bd481d}\label{main_8cpp_a0262883cd1482b5e76591b8333bd481d}} 
+\index{main.cpp@{main.cpp}!generateRandomIP@{generateRandomIP}}
+\index{generateRandomIP@{generateRandomIP}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{generateRandomIP()}{generateRandomIP()}}
+{\footnotesize\ttfamily std\+::string generate\+Random\+IP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates a random IP address in the form of \textquotesingle{}xxx.\+xxx.\+xxx.\+xxx\textquotesingle{}. 
+
+\begin{DoxyReturn}{Returns}
+A random IP address as a string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main function that initializes the load balancer simulation. 
+
+The main function prompts the user to enter the initial number of web servers and the number of clock cycles to simulate. It then generates an initial queue of requests, runs the simulation, and uses the load balancer to manage and process the requests.
+
+\begin{DoxyReturn}{Returns}
+int Exit status of the program (0 for successful execution). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_a8be36aa7ba47c05222c3e10f3f3d490f}\label{main_8cpp_a8be36aa7ba47c05222c3e10f3f3d490f}} 
+\index{main.cpp@{main.cpp}!randomJobType@{randomJobType}}
+\index{randomJobType@{randomJobType}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{randomJobType()}{randomJobType()}}
+{\footnotesize\ttfamily char random\+Job\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Randomly selects a job type for the request. 
+
+The job type will be either \textquotesingle{}P\textquotesingle{} (Processing) or \textquotesingle{}S\textquotesingle{} (Streaming).
+
+\begin{DoxyReturn}{Returns}
+A random job type (\textquotesingle{}P\textquotesingle{} or \textquotesingle{}S\textquotesingle{}). 
+\end{DoxyReturn}

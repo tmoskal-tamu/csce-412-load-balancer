@@ -26,6 +26,13 @@ private:
 
 public:
     /**
+     * @brief Generates a random IP address in the form of 'xxx.xxx.xxx.xxx'.
+     * 
+     * @return A random IP address as a string.
+     */
+    std::string generateRandomIP();
+
+    /**
      * @brief Constructs a LoadBalancer with a specified number of servers.
      * @param numServers Initial number of servers.
      */
@@ -45,8 +52,9 @@ public:
 
     /**
      * @brief Adjusts the number of servers based on the size of the request queue.
+     * @param logFile The file for output to be directed to.
      */
-    void adjustServers();
+    void adjustServers(std::ofstream& logFile);
 
     /**
      * @brief Generates a random request with random IP addresses, processing time, and job type.
@@ -56,8 +64,9 @@ public:
 
     /**
      * @brief Displays the total number of servers added and removed during the simulation, as well as the number of requests created and completed.
+     * @param logFile The file for output to be directed to.
      */
-    void displayServerChanges() const;
+    void displayServerChanges(std::ofstream& logFile) const;
 
     /**
      * @brief Adds a specified amount of initial requests to the total request count.

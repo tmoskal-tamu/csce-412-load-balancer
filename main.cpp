@@ -19,10 +19,7 @@
  * @return A random IP address as a string.
  */
 std::string generateRandomIP() {
-    return std::to_string(rand() % 256) + "." +
-           std::to_string(rand() % 256) + "." +
-           std::to_string(rand() % 256) + "." +
-           std::to_string(rand() % 256);
+    return std::to_string(rand() % 256) + "." + std::to_string(rand() % 256) + "." + std::to_string(rand() % 256) + "." + std::to_string(rand() % 256);
 }
 
 /**
@@ -59,12 +56,12 @@ int main() {
     // Initialize the load balancer with the specified number of servers
     LoadBalancer loadBalancer(numServers);
 
-    // Create initial set of requests (servers * 100 requests)
+    // Create initial set of requests (servers * 100 requests, defined in instructions)
     int initialRequests = numServers * 100;
     for (int i = 0; i < initialRequests; ++i) {
         std::string ipIn = generateRandomIP();
         std::string ipOut = generateRandomIP();
-        int time = rand() % 100 + 1;  // Random time between 1 and 100 clock cycles
+        int time = rand() % 30 + 1;  // Random time between 1 and 100 clock cycles
         char jobType = randomJobType();
         loadBalancer.addRequest(Request(ipIn, ipOut, time, jobType));
     }
@@ -74,6 +71,8 @@ int main() {
 
     // Run the simulation for the specified amount of clock cycles
     loadBalancer.simulate(runTime);
+
+    std::cout << "Log printed to: load_balancer_log.txt" << std::endl;
 
     return 0;
 }
